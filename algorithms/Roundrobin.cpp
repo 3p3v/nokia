@@ -5,12 +5,12 @@
  *      Author: ADAM
  */
 
+//ZMIENIONY KONSTRUKTOR ORAZ KILKA PETLI FOR, WHILE
+
 #include "Roundrobin.h"
 
 Roundrobin::Roundrobin(std::vector<Process>processes, int q)
-	: Alghoritm(processes) {
-	quant = q;
-}
+	: Alghoritm(processes), quant(q) {}
 
 
 void Roundrobin::alg()
@@ -34,11 +34,11 @@ void Roundrobin::alg()
 		}
 	}
 
-	while(processes.size() > 0 || processes2.size() > 0)
+	while(!processes.empty() || !processes2.empty())
 	{
-		if(processes2.size() > 0)
+		if(!processes2.empty())
 		{
-			while(wait == true)
+			while(wait)
 			{
 
 			}
@@ -68,7 +68,7 @@ void Roundrobin::alg()
 			int counter = 0;
 			for(int i = 0; i < processes.size(); i++)
 			{
-				if(processes.size() > 0)
+				if(!processes.empty())
 				{
 					if(processes.at(i).a <= trn)
 					{
@@ -97,7 +97,7 @@ void Roundrobin::alg()
 			/////////////USUWANIE JESLI ZAKONCZONY/////////////////
 			if(processes2.back().s <= 0)
 			{
-				processes2.erase(processes2.begin() + processes2.size() - 1);
+				processes2.pop_back();
 			}
 
 		}

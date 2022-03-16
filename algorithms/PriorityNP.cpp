@@ -5,12 +5,12 @@
  *      Author: ADAM
  */
 
+//ZMIENIONY KONSTRUKTOR ORAZ PETLE
+
 #include "PriorityNP.h"
 
 PriorityNP::PriorityNP(std::vector<Process>processes, int pc)
-	: Alghoritm(processes){
-	pchange = pc;
-}
+	: Alghoritm(processes), pchange(pc) {}
 
 void PriorityNP::alg()
 {
@@ -37,9 +37,9 @@ void PriorityNP::alg()
 		}
 	}
 
-	while(processes.size() > 0 || processes2.size() > 0)
+	while(!processes.empty() || !processes2.empty())
 	{
-		if(processes2.size() > 0)
+		if(!processes2.empty())
 		{
 			while(wait == true)
 			{

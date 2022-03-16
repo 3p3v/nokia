@@ -13,7 +13,7 @@ class Roundrobin final : public Alghoritm {
 public:
 	int quant;
 	std::vector<Process>processes2;
-	Roundrobin(std::vector<Process>x, int q);
+	Roundrobin(std::vector<Process>, int);
 	void alg();
 	float t_mean();
 	float ta_mean(std::vector<Process> processes);

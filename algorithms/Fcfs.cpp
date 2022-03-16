@@ -5,6 +5,8 @@
  *      Author: ADAM
  */
 
+//ZMIENIONA PETLA WHILE
+
 #include "Fcfs.h"
 
 Fcfs::Fcfs(std::vector<Process>processes)
@@ -15,7 +17,7 @@ void Fcfs::alg()
 	while(processes.size() > 1 )
 	{
 		//std::cin.ignore();
-		while(wait == true)
+		while(wait)
 		{
 
 		}
@@ -56,7 +58,7 @@ void Fcfs::alg()
 	}
 
 	//std::cin.ignore();
-	while(wait == true)
+	while(wait)
 	{
 
 	}
