@@ -38,7 +38,7 @@ public:
 	virtual float t_mean() = 0;
 	virtual float ta_mean(std::vector<Process>) = 0;
 
-	Alghoritm(std::vector<Process>);
+	Alghoritm(std::vector<Process>&);
 	virtual ~Alghoritm();
 };
 
